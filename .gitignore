@@ -39,3 +39,6 @@ Thumbs.db
 # Vite cache
 .vite/
 **/.vite/
+
+# Research
+research/
