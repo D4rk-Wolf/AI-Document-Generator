@@ -490,11 +490,22 @@ export default function App() {
           style={{
             fontFamily: "monospace",
             fontSize: "13px",
-            color: "rgba(255,255,255,0.3)",
+            color: "rgba(255,255,255,0.5)",
             letterSpacing: "2px",
+            fontWeight: "700",
           }}
         >
-          {"<CODE/>"}
+          D4RKWOLF
+        </span>
+        <span
+          style={{
+            fontSize: "10px",
+            letterSpacing: "1.5px",
+            color: "rgba(255,255,255,0.2)",
+            fontFamily: "monospace",
+          }}
+        >
+          STUDIOS
         </span>
         <span
           style={{
@@ -550,6 +561,21 @@ export default function App() {
               onClick={() => setActiveDoc(i)}
             />
           ))}
+
+          <div
+            style={{
+              marginTop: "auto",
+              paddingTop: "16px",
+              borderTop: "1px solid rgba(255,255,255,0.06)",
+              fontSize: "9px",
+              letterSpacing: "1.5px",
+              color: "rgba(255,255,255,0.18)",
+              fontFamily: "monospace",
+              textAlign: "center",
+            }}
+          >
+            D4RKWOLF STUDIOS
+          </div>
         </div>
 
         {/* Main */}
