@@ -42,3 +42,10 @@ Thumbs.db
 
 # Research
 research/
+
+# Tauri / Rust build output
+src-tauri/target/
+**/target/
+
+# Tauri generated bundles
+src-tauri/gen/
