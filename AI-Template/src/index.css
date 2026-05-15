@@ -111,3 +111,42 @@ input::placeholder, textarea::placeholder {
   color: var(--ink-3);
   font-style: italic;
 }
+
+/* ─── Shared layout utilities ────────────────────────────── */
+
+/* Panel header row — used in Terminal and Compose pane headers */
+.panel-header {
+  height: 38px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+/* Field card — the focused input wrapper in Terminal and Compose */
+.field-card {
+  background: var(--bg-1);
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-md);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.field-card:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+/* Progress bar track + fill */
+.progress-track {
+  border-radius: 2px;
+  background: var(--bg-3);
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}

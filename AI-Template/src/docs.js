@@ -2,14 +2,9 @@ export const DOCS = [
   {
     id: "prd",
     n: "01",
-    number: "01",
-    label: "PRD",
     short: "PRD",
     title: "Product Requirement Document",
-    subtitle: "Tells AI WHAT to build",
     purpose: "Tells the AI what to build",
-    color: "#1a1a2e",
-    accent: "#e8b84b",
     icon: "📋",
     goldenRule: "Clear PRD = 70% work already done",
     sections: [
@@ -24,14 +19,9 @@ export const DOCS = [
   {
     id: "system",
     n: "02",
-    number: "02",
-    label: "SYSTEM DESIGN",
     short: "System Design",
     title: "System Design Document",
-    subtitle: "Tells AI HOW to build",
     purpose: "Tells the AI how to build it",
-    color: "#0d1b2a",
-    accent: "#4fc3f7",
     icon: "🧠",
     goldenRule: "Clean, structured & scalable code",
     sections: [
@@ -45,14 +35,9 @@ export const DOCS = [
   {
     id: "uiux",
     n: "03",
-    number: "03",
-    label: "UI/UX WIREFRAME",
     short: "Wireframes",
     title: "UI/UX Wireframes",
-    subtitle: "AI needs visual clarity",
     purpose: "Gives the AI visual and design clarity",
-    color: "#1b0030",
-    accent: "#ce93d8",
     icon: "🎨",
     goldenRule: "Better UI clarity = Less rework later",
     sections: [
@@ -66,14 +51,9 @@ export const DOCS = [
   {
     id: "features",
     n: "04",
-    number: "04",
-    label: "FEATURE BREAKDOWN",
     short: "Features",
     title: "Feature Breakdown Document",
-    subtitle: "Divide big features into small tasks",
     purpose: "Breaks big features into step-by-step tasks",
-    color: "#0a1f0a",
-    accent: "#69f0ae",
     icon: "✅",
     goldenRule: "Helps AI build step-by-step, like a developer",
     sections: [
@@ -86,14 +66,9 @@ export const DOCS = [
   {
     id: "master",
     n: "05",
-    number: "05",
-    label: "MASTER PROMPT",
     short: "Master Prompt",
     title: "Master Prompt Document",
-    subtitle: "Your secret weapon",
     purpose: "Combines everything into one authoritative prompt",
-    color: "#1a0a00",
-    accent: "#ffb300",
     icon: "⚡",
     goldenRule: "This decides: Random code ❌ OR Production-ready output ✅",
     sections: [
