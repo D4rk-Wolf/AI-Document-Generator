@@ -73,7 +73,7 @@ Tauri requires icons in multiple sizes. Generate them from the existing SVG once
 
 ```bash
 cd AI-Template
-npm run tauri icon public/favicon.svg
+npm run tauri icon public/app-icon.svg
 ```
 
 Commit the generated `src-tauri/icons/` directory before pushing.
@@ -119,6 +119,7 @@ The workflow creates a draft release on GitHub with `.msi`, `.dmg`, `.AppImage`,
 ## Project Structure
 
 ```
+ai-project-docs-generator.jsx  # Standalone component (no build tools needed)
 AI-Template/
 ├── src/
 │   ├── App.jsx             # All document definitions and UI
@@ -129,10 +130,12 @@ AI-Template/
 │   ├── src/
 │   │   ├── main.rs         # Desktop entry point
 │   │   └── lib.rs          # Tauri app setup
-│   ├── icons/              # App icons (generate with tauri icon)
+│   ├── icons/              # App icons (generate with: npm run tauri icon public/app-icon.svg)
 │   ├── Cargo.toml
 │   └── tauri.conf.json
 ├── public/
+│   ├── app-icon.svg        # Source icon for tauri icon command
+│   └── favicon.svg         # Browser tab icon
 ├── index.html
 └── vite.config.js
 .github/
