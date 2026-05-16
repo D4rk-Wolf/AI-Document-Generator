@@ -1,7 +1,10 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
+import { readFileSync } from "fs";
 import { sentryVitePlugin } from "@sentry/vite-plugin";
+
+const { version } = JSON.parse(readFileSync("./package.json", "utf-8"));
 
 const sentryConfigured =
   process.env.SENTRY_AUTH_TOKEN &&
@@ -27,6 +30,10 @@ export default defineConfig({
   ],
   resolve: {
     alias: { "@": resolve(__dirname, "src") },
+  },
+  define: {
+    // Injected from package.json at build time — always in sync with the release version.
+    "import.meta.env.VITE_APP_VERSION": JSON.stringify(version),
   },
   build: {
     // "hidden" emits source maps to disk but doesn't link them in the bundle,
