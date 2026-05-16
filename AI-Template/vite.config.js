@@ -39,5 +39,6 @@ export default defineConfig({
     // "hidden" emits source maps to disk but doesn't link them in the bundle,
     // so they are only available to Sentry, not to end users.
     sourcemap: "hidden",
+    chunkSizeWarningLimit: 600,
   },
 });
