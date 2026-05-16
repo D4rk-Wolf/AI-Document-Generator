@@ -12,6 +12,7 @@ const sentryConfigured =
   process.env.SENTRY_PROJECT;
 
 export default defineConfig({
+  base: process.env.GITHUB_PAGES ? "/AI-Document-Generator/" : "/",
   plugins: [
     react(),
     // Uploads source maps to Sentry on production builds.
