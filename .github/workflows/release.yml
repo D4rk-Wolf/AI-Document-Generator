@@ -6,7 +6,7 @@ on:
       - 'v*'
 
 jobs:
-  release:
+  build:
     environment: production
     permissions:
       contents: write
@@ -63,7 +63,7 @@ jobs:
         run: npm audit --audit-level=high
         working-directory: AI-Template
 
-      - name: Build and publish release
+      - name: Build and upload artifacts
         # Pin to a specific commit SHA for supply-chain safety.
         # To update: check https://github.com/tauri-apps/tauri-action/releases
         uses: tauri-apps/tauri-action@84b9d35b5fc46c1e45415bdb6144030364f7ebc5 # action-v0.6.2
@@ -77,3 +77,14 @@ jobs:
           releaseDraft: true
           prerelease: false
           args: ${{ matrix.args }}
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Publish release
+        run: gh release edit ${{ github.ref_name }} --draft=false --repo ${{ github.repository }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
